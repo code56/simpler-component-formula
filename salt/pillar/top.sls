@@ -1,4 +1,4 @@
 base:
     '*':
         - elife
-        - simpler_component
+        - simpler-component
