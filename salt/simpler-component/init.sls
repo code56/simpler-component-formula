@@ -20,3 +20,11 @@ simpler-component-repository:
         - require:
             - builder: simpler-component-repository
 
+
+npm-install:
+    cmd.run:
+        - name: sudo npm install
+        - cwd: /srv/simpler-component/node_web_server/
+        - user: {{ pillar.elife.deploy_user.username }}
+        - require:
+            - simpler-component-repository
