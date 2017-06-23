@@ -36,3 +36,22 @@ simpler-component-database:
         - require:
              - mysql-ready
 
+
+simpler-component-database-user:
+    mysql_user.present:
+        - name: {{ pillar.simpler_component.db.user }}
+        - password: {{ pillar.simpler_component.db.password }}
+        - connection_pass: {{ pillar.elife.db_root.password }}
+        {% if pillar.elife.env in ['dev'] %}
+        - host: '%'
+        {% else %}
+        - host: localhost
+        {% endif %}
+        - use:
+            mysql_database: simpler-component-database
+        - require:
+            - mysql-ready
+
+
+
+
