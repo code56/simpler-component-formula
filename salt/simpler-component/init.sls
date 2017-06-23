@@ -34,5 +34,5 @@ simpler-component-database:
         - name: {{ pillar.simpler_component.db.name}}
         - connection_pass: {{pillar.elife.db_root.password}}
         - require:
-        - mysql-ready
+             - mysql-ready
 
