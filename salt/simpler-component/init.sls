@@ -28,3 +28,12 @@ npm-install:
         - user: {{ pillar.elife.deploy_user.username }}
         - require:
             - simpler-component-repository
+
+
+
+simpler-component-database:
+    mysql_database.present:
+        - name: {{ pillar.simpler-component.db.name}}
+        - connection_pass: {{pillar.elife.db_root.password}}
+        - require:
+            - mysql-ready
