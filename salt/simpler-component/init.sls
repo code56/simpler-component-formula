@@ -11,7 +11,7 @@ simpler-component-repository:
         - fetch_pull_requests: True
 
     file.directory:
-        - name: /srv/simpler-component
+        - name: /srv/simpler_component
         - user: {{ pillar.elife.deploy_user.username }}
         - group: {{ pillar.elife.deploy_user.username }}
         - recurse: 
