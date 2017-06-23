@@ -1,7 +1,6 @@
 simpler-component-repository:
     builder.git_latest:
         - name: git@github.com:code56/nodeServerSimplerFig.git
-        #- branch: branch_for_vagrant
         - identity: {{ pillar.elife.projects_builder.key or '' }}
        # - rev: branch_for_vagrant
         - target: /srv/simpler-component/
