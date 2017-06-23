@@ -4,5 +4,5 @@ base:
         - elife.php7
         #- elife.nodejs6
         - simpler-component.nodejs5
-        - simpler-component
+       # - simpler-component
         - elife.mysql57
