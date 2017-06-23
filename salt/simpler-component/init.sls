@@ -20,7 +20,7 @@ simpler-component-repository:
         - require:
             - builder: simpler-component-repository
 
-
+#need to add an if statement, where this command only runs the first time the machine is provisioned
 npm-install:
     cmd.run:
         - name: sudo npm install
