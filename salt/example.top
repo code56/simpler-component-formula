@@ -3,7 +3,6 @@ base:
         - elife
         - elife.php7
         #- elife.nodejs6
-        - node-web-server.nodejs5
-        - node-web-server
+        - simpler-component.nodejs5
+        - simpler-component
         - elife.mysql57
-        - node-web-server.ruby
