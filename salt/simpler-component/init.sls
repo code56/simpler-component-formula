@@ -4,7 +4,7 @@ simpler-component-repository:
         #- branch: branch_for_vagrant
         - identity: {{ pillar.elife.projects_builder.key or '' }}
        # - rev: branch_for_vagrant
-        - target: /srv/node-web-server/
+        - target: /srv/simpler-component/
         - branch: {{ salt['elife.branch']() }}
         - force_fetch: True
         - force_checkout: True
