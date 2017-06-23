@@ -31,7 +31,7 @@ npm-install:
 
 simpler-component-database:
     mysql_database.present:
-        - name: {{ pillar.simpler-component.db.name}}
+        - name: {{ pillar.simpler_component.db.name}}
         - connection_pass: {{pillar.elife.db_root.password}}
         - require:
         - mysql-ready
