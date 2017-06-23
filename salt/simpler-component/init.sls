@@ -24,12 +24,10 @@ simpler-component-repository:
 npm-install:
     cmd.run:
         - name: sudo npm install
-        - cwd: /srv/simpler-component/node_web_server/
+        - cwd: /srv/simpler_component/node_web_server/
         - user: {{ pillar.elife.deploy_user.username }}
         - require:
             - simpler-component-repository
-
-
 
 simpler-component-database:
     mysql_database.present:
@@ -37,3 +35,4 @@ simpler-component-database:
         - connection_pass: {{pillar.elife.db_root.password}}
         - require:
             - mysql-ready
+
