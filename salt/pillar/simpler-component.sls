@@ -1,4 +1,4 @@
-simpler-component:
+simpler_component:
     db:
         name: simpler-component
         user: simpler-component
