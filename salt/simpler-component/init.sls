@@ -53,5 +53,26 @@ simpler-component-database-user:
             - mysql-ready
 
 
+ 
+
+
+
+#any references to pillar, cannot have -, needs to be underscore
+simpler-component-database-access:
+    mysql_grants.present:
+        - user: {{ pillar.simpler_component.db.user }}
+        - connection_pass: {{ pillar.elife.db_root.password }}
+        - database: {{ pillar.simpler_component.db.name }}.*
+        - grant: all privileges
+        {% if pillar.elife.env in ['dev'] %}
+        - host: '%'
+        {% else %}
+        - host: localhost
+        {% endif %}
+        - require:
+            - simpler-component-database
+            - simpler-component-database-user
+
+
 
 
