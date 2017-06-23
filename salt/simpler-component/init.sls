@@ -1,9 +1,9 @@
 simpler-component-repository:
     builder.git_latest:
-        - name: git@github.com:code56/node_web_server.git
+        - name: git@github.com:code56/nodeServerSimplerFig.git
         #- branch: branch_for_vagrant
         - identity: {{ pillar.elife.projects_builder.key or '' }}
-        - rev: branch_for_vagrant
+       # - rev: branch_for_vagrant
         - target: /srv/node-web-server/
         - branch: {{ salt['elife.branch']() }}
         - force_fetch: True
